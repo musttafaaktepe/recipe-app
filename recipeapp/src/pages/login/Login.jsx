@@ -4,7 +4,7 @@ import { LoginStyled } from './Login.style'
 const Login = () => {
   return (
     <LoginStyled>
-        <div>login</div>
+        <div>login </div>
 
     </LoginStyled>
     
