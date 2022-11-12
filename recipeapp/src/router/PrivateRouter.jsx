@@ -1,15 +1,16 @@
-import React from 'react';
-import { Navigate, Outlet} from "react-router-dom";
-
+import React, { useEffect } from "react";
+import { Navigate, Outlet } from "react-router-dom";
+import { initialState, reducer } from "../reducer";
+import { useReducer } from "react";
 
 const PrivateRouter = () => {
-    const user = true;
-  return (
-    <div>
-        {user ? <Navigate to={"/home"} /> : <Outlet />}
-        
-    </div>
-  )
-}
+  const [state, dispatch] = useReducer(reducer, initialState);
+  const { user } = state;
+  useEffect(() => {
+    dispatch({ type: "LOGIN" });
+  }, []);
 
-export default PrivateRouter
+  return <div>{user ? <Navigate to={"/home"} /> : <Outlet />}</div>;
+};
+
+export default PrivateRouter;
