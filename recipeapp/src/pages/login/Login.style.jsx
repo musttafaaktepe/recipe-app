@@ -4,6 +4,7 @@ export const LoginStyled = styled.body`
   background-image: url("http://picsum.photos/1600/900");
   width: 100vw;
   height: 100vw;
+  font-family: fantasy;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -12,7 +13,7 @@ export const LoginStyled = styled.body`
 `;
 
 export const LoginDivStyled = styled.div`
-  border: 5px solid red;
+  border: 5px solid darkgray;
   border-radius: 50%;
   background-color: grey;
   opacity: 0.70;
@@ -26,5 +27,9 @@ export const LoginDivStyled = styled.div`
 
 export const LoginImgStyled = styled.img`
   width: 20%;
-  margin: 2rem ;
+  margin-bottom: 1rem ;
 `;
+
+export const LoginPStyled = styled.p`
+font-size:2rem;
+`

@@ -1,5 +1,10 @@
 import React from "react";
-import { LoginStyled, LoginDivStyled, LoginImgStyled } from "./Login.style";
+import {
+  LoginStyled,
+  LoginDivStyled,
+  LoginImgStyled,
+  LoginPStyled,
+} from "./Login.style";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import meal2 from "../../assets/meal2.svg";
@@ -9,15 +14,16 @@ const Login = () => {
     <LoginStyled>
       <LoginDivStyled>
         <LoginImgStyled src={meal2}></LoginImgStyled>
-        <Form>
+        <LoginPStyled>RECIPE APP</LoginPStyled>
+        <Form className="d-flex flex-column">
+
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>RECIPE</Form.Label>
+
             <Form.Control type="text" placeholder="USERNAME" />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
+            <Form.Control type="password" placeholder="PASWORD" />
           </Form.Group>
           <Button className="" variant="primary" type="submit">
             LOGIN
