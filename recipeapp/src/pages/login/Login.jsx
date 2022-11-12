@@ -17,13 +17,17 @@ const Login = () => {
   const navigate = useNavigate();
 
   const userNameFunc = (e) => {
-    dispatch({ type: "HOME", username: e.target.value });
+    dispatch({ type: "USERNAME", username: e.target.value });
   };
 
   const loginButtonFunc = (e) => {
     e.preventDefault();
-    dispatch({ type: "HOME" });
-    navigate("/home");
+    
+    if (userName && password) {
+      navigate("/home");
+    } else {
+      navigate("/");
+    }
   };
 
   return (
@@ -45,7 +49,7 @@ const Login = () => {
               type="password"
               placeholder="PASSWORD"
               onChange={(e) =>
-                dispatch({ type: "HOME", password: e.target.value })
+                dispatch({ type: "PASSWORD", password: e.target.value })
               }
             />
           </Form.Group>

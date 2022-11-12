@@ -8,8 +8,10 @@ export const reducer = (state, action) => {
     switch (action.type) {
         case "LOGIN":
             return {...state, user:false};
-        case "HOME":
-            return {...state, user:true, userName:action.username, password:action.password};
+        case "USERNAME":
+            return {...state, user:true, userName:action.username};
+        case "PASSWORD":
+            return {...state, user:true, password:action.password}
         default:
             break;
     } 
