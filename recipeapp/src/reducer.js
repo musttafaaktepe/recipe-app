@@ -1,5 +1,7 @@
 export const initialState = {
-    user : false
+    user : false,
+    userName:"",
+    password:""
 }
 
 export const reducer = (state, action) => {
@@ -7,7 +9,7 @@ export const reducer = (state, action) => {
         case "LOGIN":
             return {...state, user:false};
         case "HOME":
-            return {...state, user:true};
+            return {...state, user:true, userName:action.username, password:action.password};
         default:
             break;
     } 

@@ -16,7 +16,7 @@ export const LoginDivStyled = styled.div`
   border: 5px solid darkgray;
   border-radius: 50%;
   background-color: grey;
-  opacity: 0.70;
+  opacity: 0.80;
   width: 30rem;
   height: 30rem;
   display: flex;
