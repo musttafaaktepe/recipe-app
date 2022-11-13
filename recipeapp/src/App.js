@@ -14,6 +14,8 @@ function App() {
     user: false,
     userName: "",
     password: "",
+    serchFood:"",
+    selectMeal:""
   });
   return (
     <BrowserRouter>
