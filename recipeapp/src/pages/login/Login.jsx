@@ -7,29 +7,29 @@ import {
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import meal2 from "../../assets/meal2.svg";
-import { useReducer } from "react";
-import { initialState, reducer } from "../../reducer";
+import { MainContext } from "../../context/context";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const [state, dispatch] = useReducer(reducer, initialState);
-  const { userName, password, user } = state;
+  const {
+    data,
+    data: { userName, password },
+    setData,
+  } = useContext(MainContext);
+ 
+
   const navigate = useNavigate();
 
-  const userNameFunc = (e) => {
-    dispatch({ type: "USERNAME", username: e.target.value });
-  };
-
-  const loginButtonFunc = (e) => {
+  const LoginButtonFunc = (e) => {
     e.preventDefault();
-    
     if (userName && password) {
+      setData({...data, user:true})
       navigate("/home");
     } else {
       navigate("/");
     }
   };
-
   return (
     <LoginStyled>
       <LoginDivStyled>
@@ -40,7 +40,7 @@ const Login = () => {
             <Form.Control
               type="text"
               placeholder="USERNAME"
-              onChange={userNameFunc}
+              onChange={(e) => setData({ ...data, userName: e.target.value })}
             />
           </Form.Group>
 
@@ -48,13 +48,11 @@ const Login = () => {
             <Form.Control
               type="password"
               placeholder="PASSWORD"
-              onChange={(e) =>
-                dispatch({ type: "PASSWORD", password: e.target.value })
-              }
+              onChange={(e) => setData({ ...data, password: e.target.value })}
             />
           </Form.Group>
 
-          <Button type="submit" variant="primary" onClick={loginButtonFunc}>
+          <Button type="submit" variant="primary" onClick={LoginButtonFunc}>
             LOGIN
           </Button>
         </Form>

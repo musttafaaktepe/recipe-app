@@ -4,8 +4,7 @@ import { initalState, reducer } from "../../context/reducer";
 import { NavBarStyle, NavBarLinkStyle } from "./Navbar.style";
 
 const Navbar = () => {
-    const [state, dispatch] = useReducer(reducer, initalState);
-    console.log(state);
+  
   return (
     <NavBarStyle>
       <div>RECIPE APP</div>
