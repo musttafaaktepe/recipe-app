@@ -4,12 +4,12 @@ import { initialState, reducer } from "../reducer";
 import { useReducer, useState } from "react";
 
 const PrivateRouter = () => {
-  const [didMounth, setDidMounth] = useState(false);
+  // const [didMounth, setDidMounth] = useState(false);
   const [state, dispatch] = useReducer(reducer, initialState);
   const { user } = state;
   useEffect(() => {
     dispatch({ type: "LOGIN" });
-    setDidMounth(true)
+    
   }, []);
 
 
