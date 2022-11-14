@@ -14,12 +14,18 @@ function App() {
     user: false,
     userName: "",
     password: "",
-    serchFood:"",
-    selectMeal:""
+    serchFood: "",
+    selectMeal: "breakfast",
   });
+
+  const [authentication, setAuthentication] = useState({
+    API_KEY: process.env.REACT_APP_APP_KEY,
+    API_ID: process.env.REACT_APP_APP_ID,
+  });
+
   return (
     <BrowserRouter>
-      <MainContext.Provider value={{ data, setData }}>
+      <MainContext.Provider value={{ data, setData, authentication }}>
         <Routes>
           <Route element={<PrivateRouter />}>
             <Route index element={<Login />} />
