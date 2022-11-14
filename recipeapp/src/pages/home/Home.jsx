@@ -5,6 +5,7 @@ import { useContext } from "react";
 import Header from "../../components/header/Header";
 import SearchForm from "../../components/header/SearchForm";
 
+
 const Home = () => {
   const {
     data: { userName, user },
@@ -15,6 +16,7 @@ const Home = () => {
       <Navbar />
       <Header />
       <SearchForm />
+      
       {/* {alert(`Welcome ${userName}`)} */}
     </div>
   );
