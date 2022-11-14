@@ -11,7 +11,7 @@ const PrivateRouter = () => {
   // let user : true;
   return (
     <div>
-      {user ? <Navigate to={"/home"} /> : <Outlet/>}
+      {user ? <Outlet/> : <Navigate to={"/"} /> }
       
     </div>
   );

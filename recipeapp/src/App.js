@@ -8,6 +8,8 @@ import About from "./pages/about/About";
 import { MainContext } from "./context/context";
 import { useContext } from "react";
 import { useState } from "react";
+import Navbar from "./components/navbar/Navbar";
+import Details from "./pages/details/Details";
 
 function App() {
   const [data, setData] = useState({
@@ -26,13 +28,20 @@ function App() {
   return (
     <BrowserRouter>
       <MainContext.Provider value={{ data, setData, authentication }}>
+
+        {data.user && <Navbar/>} 
         <Routes>
-          <Route element={<PrivateRouter />}>
-            <Route index element={<Login />} />
+          <Route path="/" element={<Login />} />
+
+          <Route path="/home" element={<PrivateRouter />}>
+            <Route path="" element={<Home />} />
           </Route>
 
-          <Route path="/about" element={<About />} />
-          <Route path="home" element={<Home />} />
+          <Route path="/about" element={<PrivateRouter />}>
+            <Route path="" element={<About />} />
+          </Route>
+
+          <Route path="/details" element={<Details />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </MainContext.Provider>

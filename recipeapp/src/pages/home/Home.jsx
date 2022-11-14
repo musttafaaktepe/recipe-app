@@ -4,6 +4,7 @@ import { MainContext } from "../../context/context";
 import { useContext } from "react";
 import Header from "../../components/header/Header";
 import SearchForm from "../../components/header/SearchForm";
+import { Route, Routes } from "react-router-dom";
 
 
 const Home = () => {
@@ -13,10 +14,10 @@ const Home = () => {
 
   return (
     <div>
-      <Navbar />
+
       <Header />
       <SearchForm />
-      
+
       {/* {alert(`Welcome ${userName}`)} */}
     </div>
   );
