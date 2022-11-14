@@ -16,5 +16,5 @@ export const NavBarStyle = styled.div`
 export const NavBarLinkStyle = styled.div`
     display: flex;
     gap: 3rem;
-    border: 3px solid red;
+    
 `

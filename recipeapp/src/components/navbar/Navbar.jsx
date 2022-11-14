@@ -5,15 +5,33 @@ import { initalState, reducer } from "../../context/reducer";
 import { NavBarStyle, NavBarLinkStyle } from "./Navbar.style";
 
 const Navbar = () => {
-  const {data, data:{user}, setData} = useContext(MainContext)
-  
+  const {
+    data,
+    data: { user },
+    setData,
+  } = useContext(MainContext);
+
   return (
     <NavBarStyle>
       <div>RECIPE APP</div>
       <NavBarLinkStyle>
-        <Link to="/about">ABOUT</Link>
-        <a href="https://github.com/musttafaaktepe" target="blank">GITHUB</a>
-        <Link to={"/"} onClick={(e)=> setData ({...data, user:false, userName:"", password:""})}>LOGOUT</Link>
+        <Link className="text-decoration-none" to="/about">ABOUT</Link>
+        <a
+          className="text-decoration-none"
+          href="https://github.com/musttafaaktepe"
+          target="blank"
+        >
+          GITHUB
+        </a>
+        <Link
+          to={"/"}
+          className="text-decoration-none"
+          onClick={(e) =>
+            setData({ ...data, user: false, userName: "", password: "" })
+          }
+        >
+          LOGOUT
+        </Link>
       </NavBarLinkStyle>
     </NavBarStyle>
   );

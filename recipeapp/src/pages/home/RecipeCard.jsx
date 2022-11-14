@@ -12,7 +12,7 @@ const RecipeCard = ({ recipeFood }) => {
             <Card className="d-flex justify-content-center align-items-center"  style={{ width: "18rem", margin:"1rem"}}>
                 <Card.Title >{item.recipe.label}</Card.Title>
                 <Card.Img variant="top" src={item.recipe.image} />
-                <Button variant="primary">Detail</Button>      
+                <Button classNamevariant="primary">Detail</Button>      
             </Card>
             </>
         );
