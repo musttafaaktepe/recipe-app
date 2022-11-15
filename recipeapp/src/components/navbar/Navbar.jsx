@@ -27,7 +27,7 @@ const Navbar = () => {
           to={"/"}
           className="text-decoration-none"
           onClick={(e) =>
-            setData({ ...data, user: false, userName: "", password: "" })
+            setData({ ...data, user: false, userName: "", password: "", searchFood:"", selectMeal:"breakfast", recipeFood:"" })
           }
         >
           LOGOUT
