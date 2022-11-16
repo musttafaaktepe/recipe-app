@@ -26,7 +26,7 @@ const Details = () => {
     },
   } = detailsFood;
 
-  return (
+  return(
     <>
       <DivStyled>
         <h3>{detailsFood.label}</h3>
