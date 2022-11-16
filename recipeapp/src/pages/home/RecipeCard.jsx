@@ -6,7 +6,7 @@ const RecipeCard = ({ recipeFood }) => {
 
   const navigate = useNavigate();
   
-  console.log(recipeFood);
+ 
 
  
 

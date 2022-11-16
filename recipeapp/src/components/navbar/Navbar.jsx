@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { MainContext } from "../../context/context";
 import { initalState, reducer } from "../../context/reducer";
 import { NavBarStyle, NavBarLinkStyle } from "./Navbar.style";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const {
@@ -10,6 +11,8 @@ const Navbar = () => {
     data: { user },
     setData,
   } = useContext(MainContext);
+
+  const navigate = useNavigate();
 
   return (
     <NavBarStyle>
