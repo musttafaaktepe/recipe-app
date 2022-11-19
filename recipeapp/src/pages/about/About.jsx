@@ -9,7 +9,7 @@ const About = () => {
       <div>
         <div>
           <div>
-            <div>
+            <div >
               <h2>Welcome To Mustafa AKTEPE Profile</h2>
               <a href="mailto:musttafaaktepe@gmail.com">
                 <SiGmail
