@@ -6,7 +6,6 @@ import PrivateRouter from "./router/PrivateRouter";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import { MainContext } from "./context/context";
-import { useContext } from "react";
 import { useState } from "react";
 import Navbar from "./components/navbar/Navbar";
 import Details from "./pages/details/Details";
@@ -18,7 +17,7 @@ function App() {
     password: "",
     serchFood: "",
     selectMeal: "breakfast",
-    recipeFood:{}
+    recipeFood: {},
   });
 
   const [authentication, setAuthentication] = useState({
@@ -29,8 +28,7 @@ function App() {
   return (
     <BrowserRouter>
       <MainContext.Provider value={{ data, setData, authentication }}>
-
-        {data.user && <Navbar/>} 
+        {data.user && <Navbar />}
         <Routes>
           <Route path="/" element={<Login />} />
 

@@ -1,7 +1,6 @@
 import { useContext, useReducer } from "react";
 import { Link } from "react-router-dom";
 import { MainContext } from "../../context/context";
-import { initalState, reducer } from "../../context/reducer";
 import { NavBarStyle, NavBarLinkStyle } from "./Navbar.style";
 import { useNavigate } from "react-router-dom";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { SiGmail, SiLinkedin, SiGithub } from "react-icons/si";
 import { AboutStyledContactLinks } from "./About.style";
 
