@@ -20,9 +20,12 @@ function App() {
     recipeFood: {},
   });
 
+  const API_KEY = process.env.REACT_APP_APP_KEY;
+  const API_ID = process.env.REACT_APP_APP_ID;
+
   const [authentication, setAuthentication] = useState({
-    API_KEY: process.env.REACT_APP_APP_KEY,
-    API_ID: process.env.REACT_APP_APP_ID,
+    API_KEY: API_KEY,
+    API_ID: API_ID,
   });
 
   return (
