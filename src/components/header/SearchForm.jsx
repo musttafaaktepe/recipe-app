@@ -14,7 +14,7 @@ const SearchForm = () => {
     authentication: { API_KEY, API_ID },
   } = useContext(MainContext);
 
-  const url = `https://api.edamam.com/search?q=${searchFood}&app_id=${API_ID.slice}&app_key=${API_KEY.slice}&mealType=${selectMeal}`;
+  const url = `https://api.edamam.com/search?q=${searchFood}&app_id=${API_ID}&app_key=${API_KEY}&mealType=${selectMeal}`;
 
   const handleSearch = async (e) => {
     e.preventDefault();
