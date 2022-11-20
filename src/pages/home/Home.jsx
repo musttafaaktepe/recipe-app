@@ -8,10 +8,6 @@ import SearchForm from "../../components/header/SearchForm";
 
 const Home = () => {
 
-  const {
-    data: { userName, user },
-  } = useContext(MainContext);
-
   return (
     <div>
 

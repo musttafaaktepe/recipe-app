@@ -27,7 +27,9 @@ function App() {
 
   return (
     <BrowserRouter>
-      <MainContext.Provider value={{ data, setData, authentication }}>
+      <MainContext.Provider
+        value={{ data, setData, authentication, setAuthentication }}
+      >
         {data.user && <Navbar />}
         <Routes>
           <Route path="/" element={<Login />} />

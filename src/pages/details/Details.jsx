@@ -12,17 +12,15 @@ const Details = () => {
       CA,
       CHOCDF,
       CHOLE,
-      ENERC,
       ENERC_KCAL,
       FAT,
       FE,
       VITB12,
-      K,
       MG,
       NA,
       ZN,
       PROCNT,
-      SUGAR,
+      
     },
   } = detailsFood;
 

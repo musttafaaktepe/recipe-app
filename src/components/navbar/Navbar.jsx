@@ -1,4 +1,4 @@
-import { useContext, useReducer } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { MainContext } from "../../context/context";
 import { NavBarStyle, NavBarLinkStyle } from "./Navbar.style";
@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const {
     data,
-    data: { user },
     setData,
   } = useContext(MainContext);
 
