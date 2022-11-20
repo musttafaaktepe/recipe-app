@@ -13,10 +13,7 @@ const SearchForm = () => {
     authentication: { API_KEY, API_ID },
   } = useContext(MainContext);
 
-  const url = `https://api.edamam.com/search?q=${searchFood}&app_id=${API_ID.slice(
-    0,
-    -1
-  )}&app_key=${API_KEY.slice(0, -1)}&mealType=${selectMeal}`;
+  const url = `https://api.edamam.com/search?q=${searchFood}&app_id=${API_ID}&app_key=${API_KEY}&mealType=${selectMeal}`;
 
   const handleSearch = async (e) => {
     e.preventDefault();
