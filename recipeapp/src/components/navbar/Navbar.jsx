@@ -16,9 +16,11 @@ const Navbar = () => {
 
   return (
     <NavBarStyle>
-      <div>RECIPE APP</div>
+      <div onClick={() => navigate("/home")}>RECIPE APP</div>
       <NavBarLinkStyle>
-        <Link className="text-decoration-none" to="/about">ABOUT</Link>
+        <Link className="text-decoration-none" to="/about">
+          ABOUT
+        </Link>
         <a
           className="text-decoration-none"
           href="https://github.com/musttafaaktepe"
@@ -30,7 +32,15 @@ const Navbar = () => {
           to={"/"}
           className="text-decoration-none"
           onClick={(e) =>
-            setData({ ...data, user: false, userName: "", password: "", searchFood:"", selectMeal:"breakfast", recipeFood:"" })
+            setData({
+              ...data,
+              user: false,
+              userName: "",
+              password: "",
+              searchFood: "",
+              selectMeal: "breakfast",
+              recipeFood: "",
+            })
           }
         >
           LOGOUT

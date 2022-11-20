@@ -1,16 +1,18 @@
 import React from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { SiGmail, SiLinkedin, SiGithub } from "react-icons/si";
+import { AboutStyledContactLinks } from "./About.style";
 
 const About = () => {
   let navigate = useNavigate();
   return (
     <>
-      <div>
+      <div >
         <div>
           <div>
             <div >
               <h2>Welcome To Mustafa AKTEPE Profile</h2>
+              <AboutStyledContactLinks>
               <a href="mailto:musttafaaktepe@gmail.com">
                 <SiGmail
                   className="logo-gmail logo"
@@ -32,6 +34,7 @@ const About = () => {
                   style={{ color: "#000", cursor: "pointer" }}
                 />
               </a>
+              </AboutStyledContactLinks>
             </div>
           </div>
           <button
