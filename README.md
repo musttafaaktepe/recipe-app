@@ -1,2 +1,2 @@
 # recipe-app
-https://recipeapp-zsfi.onrender.com/home
+https://recipeapp-zsfi.onrender.com/
